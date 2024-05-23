@@ -4,7 +4,7 @@ __credits__ = ["Ismael Montoro Peñasco"]
 
 __license__ = "MIT"
 __version__ = "1.0.0"
-__status__ = "Stable"
+__status__ = "Beta"
 __maintainer__ = "Ismael Montoro Peñasco"
 __email__ = "ismaelmontorop@protonmail.com"
 
@@ -27,8 +27,6 @@ class cifrados_hash():
     solo tienes que llamar al metodo cuyo cifrado hash quieres aplicar
     y por ultimo pasarle el mensaje a cifrar.
     """
-    def __init__(self) -> None:
-        pass
     
     def md2(self, texto = "hello") -> str:
         return MD2().generate_hash(texto)
@@ -820,9 +818,6 @@ class cifrado_sincrono():
 
     class cifrar_DES():
         
-        def __init__(self) -> None:
-            pass
-
         def cifrar(self, texto: str = "hello", clave: str = "12345678") -> str:
             return traductor.encriptaciones(texto, clave, "3", "6", "2")
             # return traductor.cifrar_DES(texto, clave)
@@ -833,9 +828,6 @@ class cifrado_sincrono():
 
     class cifrar_3DES():
         
-        def __init__(self) -> None:
-            pass
-
         def cifrar(self, texto: str = "hello", clave: str = "123456781234567812345678") -> str:
             return traductor.encriptaciones(texto, clave, "8", "6", "2")
             # return traductor.cifrar_TripleDES(texto, str(clave))
@@ -883,9 +875,6 @@ class cifrado_sincrono():
         
     class cifrar_Blowfish():
 
-        def __init__(self) -> None:
-            pass
-
         def cifrar(self, texto: str, clave: str) -> str:
             return traductor.encriptaciones(texto, clave, "1", "6", "2")
             # return traductor.cifrar_Blowfish(texto, str(clave))
@@ -896,9 +885,6 @@ class cifrado_sincrono():
 
     class cifrar_Twofish():
         
-        def __init__(self) -> None:
-            pass
-
         def cifrar(self, texto: str = "hello", clave: str = "1234567812345678") -> str:
             return traductor.encriptaciones(texto, clave, "9", "6", "2")
             # return traductor.cifrar_twofish(texto, str(clave))
@@ -909,13 +895,9 @@ class cifrado_sincrono():
 
     class cifrar_Serpent():
         
-        def __init__(self) -> None:
-            pass
-
         def cifrar(self, texto: str = "hello", clave: str = "1234567812345678") -> str:
             return traductor.encriptaciones(texto, clave, "6", "6", "2")
-            
-
+        
         def descifrar(self, texto_cifrado: str, clave: int) -> str:
             return traductor.desencriptaciones(texto_cifrado, clave, "6", "6", "2")
             
