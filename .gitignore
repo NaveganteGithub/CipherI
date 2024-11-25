@@ -1,0 +1,30 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+# Archivos
+pyvenv.cfg
+
+# Carpetas
+Include
+<<<<<<< HEAD
+Scripts
+<<<<<<< HEAD
+Lib
+=======
+=======
+# Archivos
+pyvenv.cfg
+>>>>>>> f948c3b (CG0000002)
+
+# Carpetas
+Include
+Lib
+=======
+>>>>>>> e187619 (CG0000004)
+Scripts
+>>>>>>> c399e8c (CG0000001)
+=======
+Lib
+>>>>>>> 7b29bc6 (CG0000008)
+=======
+>>>>>>> 0004223 (Deleted all entries)

@@ -1,0 +1,24 @@
+python.exe -m pip install --upgrade pip
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+pip install hashbase pillow crc32c gostcrypto pyaes rsa pymd6
+=======
+pip install hashbase 
+pip install pillow
+pip install crc32c
+pip install gostcrypto
+pip install pyaes
+pip install rsa
+pip install pymd6
+>>>>>>> e47a961 (CG0000003)
+=======
+pip install hashbase pillow crc32c gostcrypto pyaes rsa pymd6
+>>>>>>> a2137ad (CG0000009)
+=======
+pip install hashbase pillow crc32c gostcrypto pyaes rsa pymd6
+
+
+https://stackoverflow.com/questions/62654924/how-can-i-import-external-libraries-in-pycharm
+>>>>>>> e32018a (Refactoring on the docstrings)
