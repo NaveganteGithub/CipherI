@@ -15,29 +15,31 @@ import Lib.pyJava.modulopythonjava as traductor
 from hashbase import *
 from MD6 import MD6
 
-class cifrados_hash():
+
+class cifrados_hash:
     """
     # Cifrados Hash
     Esta clase provee de una interfaz para poder utilizar algunos 
-    de los hash mas conocidos y utilizados, y otros hash que no son
+    de los hash más conocidos y utilizados, y otros hash que no son
     conocidos por la mayoria.
 
     Todos los metodos de esta clase utilizan solamente como parametro
     el mensaje que quieras cifrar, es decir, para utilizar esta clase
     solo tienes que llamar al metodo cuyo cifrado hash quieres aplicar
-    y por ultimo pasarle el mensaje a cifrar.
+    y por último pasarle el mensaje a cifrar.
     """
-    
-    def md2(self, texto = "hello") -> str:
+
+    def md2(self, texto="hello") -> str:
         return MD2().generate_hash(texto)
     
-    def md4(self, texto = "hello") -> str:
+    def md4(self, texto="hello") -> str:
         return MD4().generate_hash(texto)
     
-    def md5(self, texto = "hello") -> str:
+    def md5(self, texto="hello") -> str:
         return MD5().generate_hash(texto)
     
-    def md6(self, texto = "hello", size = 256, level = 64, key = "") -> dict:
+    # https://pypi.org/project/pymd6/
+    def md6(self, texto="hello", size = 256, level = 64, key = "") -> dict:
         md6 = MD6(size=size, levels=level, key=key)
         md6_hash = md6(texto)
         return {"hash": str(md6_hash), "hash_raw": md6_hash.raw()}
@@ -493,6 +495,8 @@ class cifrado_aplicado():
 
     def cifrado_hill_3_3(self, texto: str, matriz_clave: list):
         # https://es.wikipedia.org/wiki/Cifrado_Hill
+        # https://www.youtube.com/watch?v=ndcaOIDYYvA&pp=ygUdY2lmcmFkbyB5IGRlc2NpZnJhZG8gaGlsbCAzeDM%3D
+
         ####### Preparar el mensaje, tenemos que poner el texto en mayusculas #######
         mensaje = texto.upper()
 
@@ -836,7 +840,9 @@ class cifrado_sincrono():
             return traductor.desencriptaciones(texto_cifrado, clave, "8", "6", "2")
             # return traductor.descifrar_TripleDES(texto_cifrado, str(clave))
         
-    class cifrar_AES():
+    class cifrar_AES:
+
+        # https://pypi.org/project/pyaes/
 
         def __init__(self, modo: int = 0) -> None:
             """
@@ -952,8 +958,9 @@ class cifrado_sincrono():
     """
     class cifrar_Macguffin(): 
         pass
-            
-class cifrado_asincrono():
+
+
+class cifrado_asincrono:
     """
     Los cifrados asincronos son aquellos encriptados en los que se generan dos claves, 
     una publica y una privada, por lo general se utilizan para enviar informacion a
@@ -962,7 +969,9 @@ class cifrado_asincrono():
     mensajes que es el mismo que genera las claves publica y privada. 
     """
 
-    class cifrado_rsa():
+    class cifrado_rsa:
+
+        # https://pypi.org/project/rsa/
 
         def __init__(self, modo: int = 3) -> None:
             
