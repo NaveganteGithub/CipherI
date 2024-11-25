@@ -1,22 +1,14 @@
-__autor__ = "Ismael Montoro Peñasco"
+__author__ = "Ismael Montoro Peñasco"
 __copyright__ = "Copyright 2024, CipherI"
 __credits__ = ["Ismael Montoro Peñasco"]
 
 __license__ = "MIT"
 __version__ = "1.0.0"
-<<<<<<< HEAD
-<<<<<<< HEAD
 __status__ = "Beta"
-=======
-__status__ = "Stable"
->>>>>>> e47a961 (CG0000003)
-=======
-__status__ = "Beta"
->>>>>>> 619d1cb (CG0000011)
 __maintainer__ = "Ismael Montoro Peñasco"
 __email__ = "ismaelmontorop@protonmail.com"
 
-import random, zlib, binascii, random, time, hashlib, crc32c, gostcrypto, rsa, pyaes
+import zlib, binascii, random, time, hashlib, crc32c, gostcrypto, rsa, pyaes
 from Lib.funcionalidades.directorios import os, archivos, posicionamiento
 import Lib.cifrados.whirlpool as whirlpool
 import Lib.pyJava.modulopythonjava as traductor
@@ -36,21 +28,10 @@ class cifrados_hash:
     solo tienes que llamar al metodo cuyo cifrado hash quieres aplicar
     y por último pasarle el mensaje a cifrar.
     """
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     def __init__(self) -> None:
         pass
->>>>>>> e47a961 (CG0000003)
-=======
->>>>>>> 619d1cb (CG0000011)
-    
-    def md2(self, texto = "hello") -> str:
-=======
 
     def md2(self, texto="hello") -> str:
->>>>>>> e32018a (Refactoring on the docstrings)
         return MD2().generate_hash(texto)
     
     def md4(self, texto="hello") -> str:
@@ -842,16 +823,10 @@ class cifrado_sincrono():
     """
 
     class cifrar_DES():
-        
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+
         def __init__(self) -> None:
             pass
 
->>>>>>> e47a961 (CG0000003)
-=======
->>>>>>> 619d1cb (CG0000011)
         def cifrar(self, texto: str = "hello", clave: str = "12345678") -> str:
             return traductor.encriptaciones(texto, clave, "3", "6", "2")
             # return traductor.cifrar_DES(texto, clave)
@@ -861,16 +836,10 @@ class cifrado_sincrono():
             # return traductor.descifrar_DES(texto_cifrado, clave)
 
     class cifrar_3DES():
-        
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+
         def __init__(self) -> None:
             pass
 
->>>>>>> e47a961 (CG0000003)
-=======
->>>>>>> 619d1cb (CG0000011)
         def cifrar(self, texto: str = "hello", clave: str = "123456781234567812345678") -> str:
             return traductor.encriptaciones(texto, clave, "8", "6", "2")
             # return traductor.cifrar_TripleDES(texto, str(clave))
@@ -920,15 +889,9 @@ class cifrado_sincrono():
         
     class cifrar_Blowfish():
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
         def __init__(self) -> None:
             pass
 
->>>>>>> e47a961 (CG0000003)
-=======
->>>>>>> 619d1cb (CG0000011)
         def cifrar(self, texto: str, clave: str) -> str:
             return traductor.encriptaciones(texto, clave, "1", "6", "2")
             # return traductor.cifrar_Blowfish(texto, str(clave))
@@ -938,16 +901,10 @@ class cifrado_sincrono():
             # return traductor.descifrar_Blowfish(texto_cifrado, str(clave))
 
     class cifrar_Twofish():
-        
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+
         def __init__(self) -> None:
             pass
 
->>>>>>> e47a961 (CG0000003)
-=======
->>>>>>> 619d1cb (CG0000011)
         def cifrar(self, texto: str = "hello", clave: str = "1234567812345678") -> str:
             return traductor.encriptaciones(texto, clave, "9", "6", "2")
             # return traductor.cifrar_twofish(texto, str(clave))
@@ -957,26 +914,19 @@ class cifrado_sincrono():
             # return traductor.descifrar_twofish(texto_cifrado, str(clave))
 
     class cifrar_Serpent():
-        
-<<<<<<< HEAD
-<<<<<<< HEAD
+
         def cifrar(self, texto: str = "hello", clave: str = "1234567812345678") -> str:
             return traductor.encriptaciones(texto, clave, "6", "6", "2")
-        
-=======
+
         def __init__(self) -> None:
             pass
 
         def cifrar(self, texto: str = "hello", clave: str = "1234567812345678") -> str:
             return traductor.encriptaciones(texto, clave, "6", "6", "2")
-            
 
->>>>>>> e47a961 (CG0000003)
-=======
         def cifrar(self, texto: str = "hello", clave: str = "1234567812345678") -> str:
             return traductor.encriptaciones(texto, clave, "6", "6", "2")
-        
->>>>>>> 619d1cb (CG0000011)
+
         def descifrar(self, texto_cifrado: str, clave: int) -> str:
             return traductor.desencriptaciones(texto_cifrado, clave, "6", "6", "2")
             
